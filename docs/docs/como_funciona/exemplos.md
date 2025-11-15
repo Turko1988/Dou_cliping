@@ -201,9 +201,8 @@ dag:
     - expressão cultural
     - política cultural
   report:
-    report:
     discord:
-      webhook: https://discord.com/api/webhooks/105220xxxxxx811250/Q-XsfdnoHtudTQ-8A6zzzzznitai-vi0bGLE7xxxxxxxxxxxxxxxxxxxmx94R3oZ1h0ngl1
+      webhook: https://discord.com/api/webhooks/105220xxxxxx811250/Q-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### Exemplo 9
@@ -220,9 +219,8 @@ dag:
     - expressão cultural
     - política cultural
   report:
-    report:
     slack:
-      webhook: https://hooks.slack.com/services/XXXXXXXX/XXXXNFDXXX/n6QXXXXrPwxQ71ZXXXXXT9
+      webhook: https://hooks.slack.com/services/XXXXXXXX/XXXXNFDXXX/n6QXXXXRXXXXXXXXXXXXXX
 ```
 
 ### Exemplo 10
@@ -261,8 +259,8 @@ dag:
         - dados abertos
         - governo aberto
         - lei de acesso à informação
-      force_rematch: On
-      ignore_signature_match: On
+      force_rematch: True
+      ignore_signature_match: True
     - header: "Pesquisa no QD"
       sources:
         - QD
@@ -270,8 +268,8 @@ dag:
         - dados abertos
         - governo aberto
         - lei de acesso à informação
-      force_rematch: On
-      ignore_signature_match: On
+      force_rematch: True
+      ignore_signature_match: True
     - header: "Pesquisa no DOU e QD (misto)"
       sources:
         - DOU
@@ -280,8 +278,8 @@ dag:
         - dados abertos
         - governo aberto
         - lei de acesso à informação
-      force_rematch: On
-      ignore_signature_match: On
+      force_rematch: True
+      ignore_signature_match: True
   report:
     emails:
       - destination@gestao.gov.br

@@ -6,9 +6,9 @@ A página abaixo lista os parâmetros configuráveis nos arquivos YAML:
 * **id**: Nome identificador da DAG a ser gerada.
 * **description**: Descrição da DAG de pesquisa.
 * **doc_md**: Documentação em markdown da DAG para uma descrição mais completa.
-* **schedule**: Agendamento da periodicidade de execução da DAG. Padrão cron (0 8 * * MON-FRI)
-* **dataset**: Agendamento da DAG baseado na atualização de um Dataset do Airflow. Em conjunto com o schedule a execução é condicionada ao schedule e dataset.
-* **callback**: Responsáveis por notificar os responsáveis quando ocoore alguma falha no sistema clipping.
+* **schedule**: Agendamento da periodicidade de execução da DAG (expressão CRON). Quando ausente, o sistema usa execução diária às 05h com minuto balanceado por hash do `dag_id` (ex.: `43 5 * * *`). Recomendado definir o `schedule` explicitamente em produção.
+* **dataset**: Agendamento da DAG baseado na atualização de um Dataset do Airflow. Em conjunto com o `schedule`, a execução pode ser condicionada ao Dataset.
+* **callback**: Configuração de e-mails para notificação de falhas na execução.
 * **tags**: Tags para categorizar a DAG.
 * **owner**: Responsável pela DAG.
 
@@ -32,16 +32,20 @@ A página abaixo lista os parâmetros configuráveis nos arquivos YAML:
 - **excerpt_size**: Número máximo de caracteres exibidos no trecho onde o termo de busca foi localizado. (Funcionalidade disponível apenas no Querido Diário)
 - **number_of_excerpts**: Número máximo de ocorrências do termo de busca em uma mesma edição. (Funcionalidade disponível apenas no Querido Diário)
 
+Observações importantes:
+- Quando a fonte incluir `QD`, os **terms** são obrigatórios.
+- Em buscas no `DOU`, é permitido não informar **terms** apenas quando houver pelo menos um filtro entre **department** ou **pubtype**.
+- Utilize sempre booleanos `True`/`False` nos YAMLs (não usar `On/Off`).
+
 ## Parâmetros do Relatório (Report)
 - **attach_csv**: Anexar no email o resultado da pesquisa em CSV.
-- **discord_webhook**: URL de Webhook para integração com o Discord.
 - **emails**: Lista de emails dos destinatários.
 - **footer_text**: Texto em HTML do rodapé do relatório.
 - **header_text**: Texto em HTML de cabeçalho do relatório.
 - **hide_filters**: Omite no relatório os filtros de pesquisa.
 - **no_results_found_text**: Texto padrão para quando não há resultados encontrados. Default: Nenhum dos termos pesquisados foi encontrado nesta consulta.
-- **report**: Parâmetros de notificação de relatório.
 - **skip_null**: Dispensa o envio de email quando não há resultados encontrados em todas as pesquisas. Valores: True ou False. Default: True.
-- **slack_webhook**: URL de Webhook para integração com o Slack.
 - **subject**: Texto de assunto do email.
+- **slack**: Objeto com configuração de webhook do Slack. Campos: `webhook`.
+- **discord**: Objeto com configuração de webhook do Discord. Campos: `webhook`.
 
