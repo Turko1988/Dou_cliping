@@ -13,9 +13,9 @@
 
 **SENTINELA** é uma plataforma SaaS de Inteligência Reputacional focada no mercado político-corporativo brasileiro. Agrega ferramentas de monitoramento dispersas (notícias, redes sociais, Diário Oficial) em um dashboard unificado com IA, alertas em tempo real e distribuição via canal de lobistas.
 
-**Tese de Negócio:** Transformar ferramentas open-source e APIs existentes em uma solução premium B2G/B2B, faturando R$ 50+ milhões em 2026 através de licenciamento para gabinetes, secretarias e órgãos públicos.
+**Tese de Negócio:** Transformar ferramentas open-source e APIs existentes em uma solução premium B2G/B2B através de licenciamento para gabinetes, secretarias e órgãos públicos.
 
-**Diferencial:** Único no mercado com UX focada em não-técnicos (políticos/assessores), distribuição via lobistas (30-40% comissão recorrente) e timing perfeito (eleições 2026-2027).
+**Diferencial:** Único no mercado com UX focada em não-técnicos (políticos/assessores), modelo de distribuição estratégico e timing perfeito (eleições 2026-2027).
 
 ---
 
@@ -31,7 +31,7 @@ Políticos, gabinetes parlamentares e órgãos públicos enfrentam 3 dores crít
 ### Impacto Quantitativo
 - **5.570 gabinetes federais** (594 parlamentares) + 26 governos estaduais
 - **Tempo desperdiçado**: 3-5 horas/dia por assessor fazendo clipping manual
-- **Custo de crise mal gerida**: R$ 500k - R$ 5M em danos reputacionais (estimativa baseada em casos reais)
+- **Custo de crise mal gerida**: Alto impacto em danos reputacionais
 
 ### Impacto Qualitativo
 - Estresse constante de assessores ("e se perdi algo importante?")
@@ -90,7 +90,7 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 7. **Fim do dia** recebe resumo automático via Telegram
 
 ### Diferencial
-- **Distribuição única**: Lobistas vendem (30-40% comissão) → CAC = R$ 0
+- **Distribuição estratégica**: Modelo de parceria com consultores especializados
 - **UX político**: WhatsApp > Dashboard complexo | PDF > Dados brutos
 - **IA contextual BR**: Entende jargão político brasileiro ("CPI", "Rapporteur", "Obstrução")
 - **Timing perfeito**: Eleições 2026 (municipais) + 2027 (gerais) = 2 anos de boom
@@ -130,9 +130,9 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 ## 📊 MÉTRICAS DE SUCESSO
 
 ### Produto (Quantitativas)
-- **Adoção**: 300 clientes ativos pagantes até Dez/2026
+- **Adoção**: Expansão gradual de clientes ativos pagantes
 - **Engajamento**: 80% dos usuários acessam dashboard ≥3x/semana
-- **Performance**: 
+- **Performance**:
   - Alerta crítico enviado em < 2 minutos da publicação
   - Dashboard carrega em < 3 segundos
   - 99.5% uptime
@@ -144,10 +144,9 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 - **Feedback esperado**: "Não consigo mais trabalhar sem o Sentinela"
 
 ### Meta de 6 Meses (Jun/2026)
-- **MRR**: R$ 1.8M (100 clientes × R$ 18k/mês médio)
-- **ARR Run Rate**: R$ 21.6M
 - **Churn**: < 5% mensal
 - **Tempo de resposta a alertas**: < 90 segundos (P95)
+- **Satisfação de clientes**: NPS > 60
 
 ---
 
@@ -207,12 +206,12 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 
 ### Integrações Necessárias
 - **Ro-DOU** (open source): Fork do GitHub + adaptações
-- **Firecrawl**: API $299/mês para scraping de notícias
-- **Bright Data**: API $500/mês para redes sociais + proxies
-- **OpenAI/Anthropic**: API $200/mês para análise IA
-- **Twilio**: WhatsApp Business API ~$300/mês
+- **Firecrawl**: API para scraping de notícias
+- **Bright Data**: API para redes sociais + proxies
+- **OpenAI/Anthropic**: API para análise IA
+- **Twilio**: WhatsApp Business API
 - **Telegram Bot API**: Gratuito
-- **SendGrid**: Email transacional $150/mês
+- **SendGrid**: Email transacional
 
 ### Restrições Técnicas
 - **Performance**: Alerta < 2min | Dashboard < 3s load | API < 500ms P95
@@ -238,7 +237,7 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 6. Liga para advogado do gabinete em 3 minutos
 7. Nota oficial publicada em 40 minutos (antes de viralizar)
 
-**Valor entregue**: Evitou que notícia viralizasse sem resposta | Economizou R$ 2M em danos reputacionais
+**Valor entregue**: Evitou que notícia viralizasse sem resposta | Mitigou significativamente danos reputacionais
 
 ---
 
@@ -257,7 +256,7 @@ Uma plataforma unificada que monitora 24/7 todas as menções a um político/ór
 4. Identifica 1 menção que precisa resposta, anota
 5. Chega no gabinete, já sabe exatamente o que fazer
 
-**Valor entregue**: Economiza 2h45min/dia (R$ 4.500/mês em tempo de trabalho)
+**Valor entregue**: Economiza 2h45min/dia em tempo de trabalho da equipe
 
 ---
 

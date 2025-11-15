@@ -14,7 +14,7 @@
 ### Proposta de Valor Única
 1. **NÃO reinventamos a roda**: Agregamos APIs existentes (Firecrawl, Bright Data, Ro-DOU)
 2. **UX político**: Interface simplificada para não-técnicos (políticos/assessores)
-3. **Distribuição via lobistas**: Canal de vendas com 30-40% comissão recorrente
+3. **Distribuição estratégica**: Canal de parcerias com consultores especializados
 4. **Timing perfeito**: Eleições 2026-2027 = 2 anos de boom
 
 ### Usuários Finais
@@ -302,8 +302,8 @@ PythonOperator(
 
 ### 2. Firecrawl (Notícias)
 
-**Documentação**: https://docs.firecrawl.dev  
-**Preço**: $299/mês (50k páginas)
+**Documentação**: https://docs.firecrawl.dev
+**Modelo**: Assinatura mensal com limite de páginas
 
 **Implementação**:
 ```python
@@ -393,8 +393,8 @@ def scrape_news_for_all_users():
 
 ### 3. Bright Data (Redes Sociais)
 
-**Documentação**: https://brightdata.com/products/datasets/social-media  
-**Preço**: $500/mês
+**Documentação**: https://brightdata.com/products/datasets/social-media
+**Modelo**: Assinatura mensal
 
 **Implementação**:
 ```python
@@ -461,8 +461,8 @@ class SocialScraperBrightData:
 
 ### 4. OpenAI (Análise de Sentimento)
 
-**Modelo**: GPT-4 Turbo  
-**Custo**: ~$0.01 por análise
+**Modelo**: GPT-4 Turbo
+**Custo**: Pay-per-use baseado em tokens
 
 **Implementação**:
 ```python

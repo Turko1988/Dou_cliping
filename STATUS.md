@@ -1,8 +1,8 @@
 # 📊 STATUS - Acompanhamento do Projeto SENTINELA
 
-**Última atualização**: 14 de Novembro de 2025  
-**Fase atual**: PLANEJAMENTO → MVP  
-**Meta**: Faturar R$ 50M em 2026
+**Última atualização**: 14 de Novembro de 2025
+**Fase atual**: PLANEJAMENTO → MVP
+**Meta**: Lançar produto e expandir base de clientes
 
 ---
 
@@ -142,7 +142,7 @@ Lançar MVP do SENTINELA em **90 dias** (Jan-Mar 2026) com 30 clientes beta pago
 **Status**: 🔜 NÃO INICIADO  
 **Objetivo**: 10 clientes beta usando + feedback loop
 
-**Meta**: 10 clientes beta pagos (R$ 5k/mês) por 30 dias
+**Meta**: 10 clientes beta pagantes por 30 dias
 
 **Tasks**:
 - [ ] Recrutar 10 beta testers (via lobistas parceiros)
@@ -182,12 +182,12 @@ Lançar MVP do SENTINELA em **90 dias** (Jan-Mar 2026) com 30 clientes beta pago
 | Testes coverage | >70% | 0% | 🔜 |
 
 ### Produto (Pós-MVP)
-| Métrica | Meta Q1 | Meta Q2 | Meta Q3 | Meta Q4 | Atual |
-|---------|---------|---------|---------|---------|-------|
-| Clientes ativos | 30 | 100 | 250 | 300 | 0 |
-| MRR | R$ 450k | R$ 1.8M | R$ 5.5M | R$ 7.5M | R$ 0 |
-| NPS | >50 | >60 | >65 | >70 | - |
-| Churn | <10% | <5% | <3% | <3% | - |
+| Métrica | Meta | Atual |
+|---------|------|-------|
+| Clientes ativos | Crescimento progressivo | 0 |
+| NPS | >60 | - |
+| Churn | <5% | - |
+| Engajamento | 80% usuários 3x/semana | - |
 
 ---
 
@@ -214,31 +214,18 @@ _Nenhum bloqueador crítico no momento_
 
 ---
 
-## 💰 ORÇAMENTO & CUSTOS
+## 💰 INFRAESTRUTURA
 
-### Investimento Inicial (MVP)
-| Item | Valor | Status |
-|------|-------|--------|
-| Desenvolvimento (400h) | R$ 60-100k | ⏳ Pendente |
-| APIs (3 meses) | R$ 18.6k | ⏳ Pendente |
-| **TOTAL MVP** | **R$ 78.6-118.6k** | |
-
-### Custos Mensais (Produção)
-| Item | Valor/mês |
+### Componentes de Produção
+| Item | Categoria |
 |------|-----------|
-| Infra (DO/AWS) | R$ 700 |
-| Firecrawl | R$ 1.500 |
-| Bright Data | R$ 2.500 |
-| OpenAI | R$ 1.000 |
-| Twilio (WhatsApp) | R$ 300 |
-| SendGrid | R$ 150 |
-| Monitoring (Sentry) | R$ 200 |
-| **TOTAL** | **R$ 6.350/mês** |
-
-### Break-even
-- Custo operacional: R$ 6.350/mês
-- Ticket médio: R$ 15.000/mês
-- **Break-even**: 1 cliente (coberto com sobra!)
+| Infra (DO/AWS) | Hospedagem |
+| Firecrawl | Scraping de notícias |
+| Bright Data | Redes sociais |
+| OpenAI | Análise IA |
+| Twilio (WhatsApp) | Notificações |
+| SendGrid | Email |
+| Monitoring (Sentry) | Observabilidade |
 
 ---
 
@@ -250,10 +237,10 @@ _Nenhum bloqueador crítico no momento_
 3. [ ] Call com Leopoldo (kick-off, alinhar sprints)
 
 ### Importante (Fazer esta semana)
-4. [ ] Recrutar 3 lobistas master como sócios estratégicos
+4. [ ] Estabelecer parcerias estratégicas com consultores
 5. [ ] LOI (Letter of Intent) de 10 clientes piloto
-6. [ ] Setup CNPJ (se ainda não tiver)
-7. [ ] Contratar advogado (retainer R$ 15k/mês)
+6. [ ] Setup jurídico da empresa
+7. [ ] Contratar consultoria jurídica
 
 ### Nice-to-have
 8. [ ] Criar deck de vendas para lobistas
@@ -270,12 +257,12 @@ _Nenhum bloqueador crítico no momento_
 - [ ] **CDN**: CloudFlare vs AWS CloudFront? (Recomendação: CloudFlare - free tier suficiente)
 
 ### Produto
-- [ ] **Pricing final**: R$ 15k ou R$ 18k/mês? (Testar com beta users)
-- [ ] **Contratos**: Mensal ou só anual? (Oferecer os 2, anual com 20% desconto)
+- [ ] **Pricing final**: Definir modelo de precificação (Testar com beta users)
+- [ ] **Contratos**: Mensal ou anual? (Oferecer ambas opções)
 - [ ] **Onboarding**: Automático ou call obrigatória? (Call obrigatória pro beta, automatizar depois)
 
 ### Comercial
-- [ ] **Comissão lobistas**: 30% ou 40%? (40% nos primeiros 3 meses, depois 30%)
+- [ ] **Modelo de distribuição**: Definir estrutura de parcerias
 - [ ] **Modelo de precificação**: Flat ou por keyword? (Flat - mais simples)
 
 ---
@@ -302,14 +289,14 @@ _Nenhum bug conhecido ainda (projeto não iniciou desenvolvimento)_
 
 ## 🎤 FEEDBACK DOS STAKEHOLDERS
 
-### Lobistas Parceiros
+### Parceiros Estratégicos
 _Ainda não validado - agendar calls_
 
 **Perguntas a fazer**:
-1. Comissão 30-40% é atraente?
-2. Ticket de R$ 15-18k/mês é viável?
-3. Conseguem fechar 10 clientes piloto?
-4. Quais features são must-have vs nice-to-have?
+1. Modelo de parceria é atraente?
+2. Conseguem apoiar recrutamento de clientes piloto?
+3. Quais features são must-have vs nice-to-have?
+4. Feedback sobre proposta de valor
 
 ### Beta Users (Futuros)
 _Pendente recrutamento_
