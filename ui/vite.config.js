@@ -4,14 +4,14 @@ export default defineConfig({
   server: {
     proxy: {
       '/airflow': {
-        target: 'http://localhost:5174',
+        target: 'http://localhost:8080',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/airflow/, '/airflow'),
+        rewrite: (path) => path.replace(/^\/airflow/, ''),
       },
       '/smtp': {
-        target: 'http://localhost:5174',
+        target: 'http://localhost:5001',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/smtp/, '/smtp'),
+        rewrite: (path) => path.replace(/^\/smtp/, ''),
       },
     },
   },

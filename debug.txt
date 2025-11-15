@@ -1,0 +1,300 @@
+leo@leo-PC:~/Desktop/projects/Dou_cliping/ui$ 
+> dev
+> vite
+
+
+  VITE v7.2.2  ready in 283 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+4:14:44 PM [vite] http proxy error: /airflow/api/v1/dags/rodolfo_dou_example_ideal/dagRuns?limit=25&offset=0
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:14:45 PM [vite] http proxy error: /smtp/api/messages
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:24:58 PM [vite] http proxy error: /airflow/api/v1/dags/rodolfo_dou_example_ideal/dagRuns?limit=25&offset=0
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:29:00 PM [vite] http proxy error: /airflow/api/v1/dags/rodolfo_dou_example_ideal/dagRuns
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:29:53 PM [vite] http proxy error: /airflow/api/v1/dags/rodolfo_dou_example_ideal/dagRuns
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) (x2)
+4:30:02 PM [vite] http proxy error: /airflow/api/v1/dags/dou_clipping_diario/dagRuns
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:30:05 PM [vite] http proxy error: /airflow/api/v1/dags/rodolfo_dou_example_ideal/dagRuns?limit=25&offset=0
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+4:30:15 PM [vite] http proxy error: /smtp/api/messages
+Error: connect ECONNREFUSED 127.0.0.1:5174
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+dei ctrl+c, reiniciei o terminal e executei o sudo airflow log: leo@leo-PC:~/Desktop/projects/Dou_cliping/ui$ sudo docker compose logs airflow-webserver
+[sudo] password for leo: 
+airflow-webserver  | 
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-webserver  | DB: postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-webserver  | Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-webserver  | [2025-11-15T19:04:34.296+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-webserver  | [2025-11-15T19:04:34.298+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-webserver  | [2025-11-15T19:04:34.549+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-webserver  | [2025-11-15T19:04:34.550+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-webserver  | [2025-11-15T19:04:34.552+0000] {db.py:1674} INFO - Creating tables
+airflow-webserver  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-webserver  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-webserver  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-webserver  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-webserver  | Database migrating done!
+airflow-webserver  | WARNING: Environment variable '_AIRFLOW_DB_UPGRADE' is deprecated please use '_AIRFLOW_DB_MIGRATE' instead
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-webserver  | airflow already exist in the db
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-webserver  | [2025-11-15T19:04:46.542+0000] {configuration.py:2096} INFO - Creating new FAB webserver config file in: /opt/airflow/webserver_config.py
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-webserver  | /home/airflow/.local/lib/python3.10/site-packages/airflow/providers/fab/auth_manager/fab_auth_manager.py:498 FutureWarning: section/key [webserver/update_fab_perms] has been deprecated, you should use[fab/update_fab_perms] instead. Please update your `conf.get*` call to use the new name
+airflow-webserver  | [2025-11-15 19:04:54 +0000] [39] [INFO] Starting gunicorn 23.0.0
+airflow-webserver  | [2025-11-15 19:04:57 +0000] [39] [INFO] Listening at: http://0.0.0.0:8080 (39)
+airflow-webserver  | [2025-11-15 19:04:57 +0000] [39] [INFO] Using worker: sync
+airflow-webserver  | [2025-11-15 19:04:57 +0000] [62] [INFO] Booting worker with pid: 62
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:04:58 +0000] "GET /login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome HTTP/1.1" 200 18693 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:01 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | [2025-11-15T19:05:02.501+0000] {override.py:1625} INFO - Updated user Airflow Admin
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:02 +0000] "POST /login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome HTTP/1.1" 302 239 "http://localhost:8080/login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:02 +0000] "GET /home HTTP/1.1" 200 181732 "http://localhost:8080/login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:02 +0000] "GET /static/dist/switch.761490b7ace51c033e57.css HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:02 +0000] "GET /static/dist/dags.7ed692b9cfe14425e273.css HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:02 +0000] "GET /static/dist/d3.min.js HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:03 +0000] "GET /static/dist/dags.7ed692b9cfe14425e273.js HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:03 +0000] "POST /blocked HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:03 +0000] "POST /last_dagruns HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:03 +0000] "POST /dag_stats HTTP/1.1" 200 3028 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:03 +0000] "POST /task_stats HTTP/1.1" 200 9963 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:11 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:17 +0000] "GET /datasets HTTP/1.1" 200 24405 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:17 +0000] "GET /static/dist/datasets.3f8d6edbaa37d4cd1dca.js HTTP/1.1" 200 0 "http://localhost:8080/datasets" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:18 +0000] "GET /api/v1/datasets/events?limit=25&order_by=-timestamp HTTP/1.1" 200 49 "http://localhost:8080/datasets" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:18 +0000] "GET /object/dataset_dependencies HTTP/1.1" 200 807 "http://localhost:8080/datasets" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:21 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:31 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:37 +0000] "GET /home HTTP/1.1" 200 181732 "http://localhost:8080/login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:38 +0000] "POST /blocked HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:38 +0000] "POST /last_dagruns HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:38 +0000] "POST /dag_stats HTTP/1.1" 200 3028 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:05:39 +0000] "POST /task_stats HTTP/1.1" 200 9963 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:41 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:05:51 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:01 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:12 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:32 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:42 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:06:52 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:02 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:12 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:32 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:42 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:44 +0000] "GET /dags/all_parameters_example/grid HTTP/1.1" 200 9457 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:44 +0000] "GET /static/dist/grid.1f3a401bd9c255d473b8.js HTTP/1.1" 200 0 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:44 +0000] "GET /static/dist/dag.a1878c678b5ea323db3e.js HTTP/1.1" 200 0 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:45 +0000] "GET /object/grid_data?dag_id=all_parameters_example&num_runs=25 HTTP/1.1" 200 983 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:45 +0000] "GET /object/next_run_datasets/all_parameters_example HTTP/1.1" 200 39 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:45 +0000] "GET /api/v1/dags/all_parameters_example HTTP/1.1" 200 1389 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:45 +0000] "GET /api/v1/dags/all_parameters_example/details HTTP/1.1" 200 1959 "http://localhost:8080/dags/all_parameters_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:50 +0000] "GET /home HTTP/1.1" 200 181732 "http://localhost:8080/login/?next=http%3A%2F%2Flocalhost%3A8080%2Fhome" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:51 +0000] "POST /blocked HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:51 +0000] "POST /last_dagruns HTTP/1.1" 200 2 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:51 +0000] "POST /dag_stats HTTP/1.1" 200 3028 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:51 +0000] "POST /task_stats HTTP/1.1" 200 9963 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:52 +0000] "GET /home?status=paused HTTP/1.1" 200 181783 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:07:52 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:53 +0000] "POST /blocked HTTP/1.1" 200 2 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:53 +0000] "POST /last_dagruns HTTP/1.1" 200 2 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:54 +0000] "POST /dag_stats HTTP/1.1" 200 3028 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:07:54 +0000] "POST /task_stats HTTP/1.1" 200 9963 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:01 +0000] "GET /dags/discord_example/grid HTTP/1.1" 200 9414 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:01 +0000] "GET /object/grid_data?dag_id=discord_example&num_runs=25 HTTP/1.1" 200 983 "http://localhost:8080/dags/discord_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:01 +0000] "GET /object/next_run_datasets/discord_example HTTP/1.1" 200 39 "http://localhost:8080/dags/discord_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:02 +0000] "GET /api/v1/dags/discord_example HTTP/1.1" 200 1225 "http://localhost:8080/dags/discord_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:02 +0000] "GET /api/v1/dags/discord_example/details HTTP/1.1" 200 1829 "http://localhost:8080/dags/discord_example/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:03 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:09 +0000] "GET /home?status=paused HTTP/1.1" 200 181783 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:10 +0000] "POST /blocked HTTP/1.1" 200 2 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:10 +0000] "POST /last_dagruns HTTP/1.1" 200 2 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:10 +0000] "POST /dag_stats HTTP/1.1" 200 3028 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 172.18.0.1 - - [15/Nov/2025:19:08:10 +0000] "POST /task_stats HTTP/1.1" 200 9963 "http://localhost:8080/home?status=paused" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:13 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:23 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:33 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:43 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:08:53 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:03 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:13 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:23 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:33 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:43 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:09:53 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:04 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:14 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:24 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:34 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:44 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:10:54 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:04 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:14 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:24 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:34 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:44 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:11:55 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:05 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:15 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:25 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:35 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:45 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:12:55 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:05 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:15 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:25 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:36 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:46 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:13:56 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:06 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:16 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:26 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:36 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:46 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:14:56 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:06 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:16 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:27 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:37 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:47 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:15:57 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:07 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:17 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:27 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:37 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:47 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:16:57 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:07 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:17 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:28 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:38 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:48 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:17:58 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:08 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:18 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:28 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:38 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:48 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:18:58 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:08 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:18 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:29 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:39 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:49 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:19:59 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:09 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:19 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:29 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:39 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:49 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:20:59 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:21:09 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:21:19 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:21:30 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:21:40 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:21:50 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:00 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:10 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:20 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:30 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:40 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:22:50 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:00 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:10 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:21 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:31 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:41 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:23:51 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:01 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:11 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:21 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:31 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:41 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:24:51 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:01 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:11 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:32 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:42 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:25:52 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:02 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:12 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:32 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:42 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:26:52 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:02 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:12 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:33 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:43 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:27:53 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:03 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:13 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:23 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:33 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:43 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:28:53 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:03 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:13 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:23 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:34 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:44 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:29:54 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:04 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:14 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:24 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:34 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:44 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:30:54 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:04 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:14 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:25 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:35 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:45 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:31:55 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:05 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:15 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:25 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:35 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:45 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:32:55 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:33:06 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:33:16 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:33:26 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:33:36 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+airflow-webserver  | 127.0.0.1 - - [15/Nov/2025:19:33:46 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+leo@leo-PC:~/Desktop/projects/Dou_cliping/ui$ 
+
+
+
+
+
+
+
+
+
+

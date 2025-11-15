@@ -83,6 +83,26 @@ React 18 + TypeScript
 
 ---
 
+### ⚠️ Nota Sobre o Setup: Ro-DOU vs. Sentinela
+> **Este repositório está em transição.** O `README` abaixo descreve a visão de produto do **Sentinela**, um MVP a ser construído. No entanto, a base de código e a configuração `docker-compose` atuais correspondem ao projeto **Ro-DOU**, um ambiente Apache Airflow funcional.
+>
+> **Para rodar o projeto no estado atual (Ro-DOU), siga as instruções abaixo.** As instruções do "QUICKSTART" original referem-se a componentes do Sentinela que ainda serão desenvolvidos.
+
+### Setup Rápido (Ambiente Ro-DOU Atual)
+1.  **Pré-requisito:** Docker e Docker Compose instalados.
+2.  **Comando:** No terminal, na raiz do projeto, execute:
+    ```bash
+    # Crie um arquivo .env vazio, pois o .env.example pode não existir
+    touch .env
+    # Suba os containers. Use 'sudo' se necessário.
+    sudo docker compose up -d
+    ```
+3.  **Acesso aos Serviços:**
+    *   **Apache Airflow:** [http://localhost:8080](http://localhost:8080) (usuário: `airflow`, senha: `airflow`)
+    *   **Smtp4dev (E-mails):** [http://localhost:5001](http://localhost:5001)
+
+---
+
 ## 🚀 QUICKSTART
 
 ### Pré-requisitos

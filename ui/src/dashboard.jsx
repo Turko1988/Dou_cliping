@@ -19,7 +19,7 @@ const Button = ({ children, variant = 'default', size = 'default', className = '
   return (<button className={`inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${variants[variant]} ${sizes[size]} ${className}`} {...props}>{children}</button>)
 }
 
-const Input = ({ className = '', type = 'text', ...props }) => (<input type={type} className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} />)
+const Input = ({ className = '', type = 'text', ...props }) => (<input type={type} className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} />)
 const Label = ({ children, htmlFor, className = '' }) => (<label htmlFor={htmlFor} className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}>{children}</label>)
 
 const Badge = ({ children, variant = 'default', className = '' }) => {
@@ -167,7 +167,35 @@ export default function App() {
   const renderPage = () => { switch (currentPage) { case 'resumo': return (<DashboardHomePage summary={summary} termData={termData} dailyData={dailyData} />); case 'disparar': return (<TriggerPage />); case 'execucoes': return (<RunsPage runs={runs} />); case 'configuracoes': return (<ConfigPage />); case 'relatorios': return (<ReportsPage />); case 'auditoria': return (<div className="text-center p-10"><Users className="h-16 w-16 mx-auto text-muted-foreground mb-4" /> <h2 className="text-xl font-semibold">Seção de Auditoria</h2><p className="text-muted-foreground">Aqui ficaria o log de auditoria (quem disparou, quem alterou, etc).</p></div>); default: return (<DashboardHomePage summary={summary} termData={termData} dailyData={dailyData} />) } }
   return (
     <div className="flex h-screen w-full bg-background text-foreground dark" style={{ fontFamily: 'Inter, sans-serif' }}>
-      <style>{`.dark { --background: 240 10% 3.9%; --foreground: 0 0% 98%; --card: 240 10% 3.9%; --card-foreground: 0 0% 98%; --popover: 240 10% 3.9%; --popover-foreground: 0 0% 98%; --primary: 210 40% 98%; --primary-foreground: 222.2 47.4% 11.2%; --secondary: 240 3.7% 15.9%; --secondary-foreground: 0 0% 98%; --muted: 240 3.7% 15.9%; --muted-foreground: 240 5% 64.9%; --accent: 240 3.7% 15.9%; --accent-foreground: 0 0% 98%; --destructive: 0 62.8% 30.6%; --destructive-foreground: 0 0% 98%; --border: 240 3.7% 15.9%; --input: 240 3.7% 15.9%; --ring: 210 40% 98%; } .bg-background{background-color:hsl(var(--background))}.text-foreground{color:hsl(var(--foreground))}.bg-card{background-color:hsl(var(--card))}.text-card-foreground{color:hsl(var(--card-foreground))}.border-border{border-color:hsl(var(--border))}.bg-primary{background-color:hsl(var(--primary))}.text-primary-foreground{color:hsl(var(--primary-foreground))}.bg-secondary{background-color:hsl(var(--secondary))}.text-secondary-foreground{color:hsl(var(--secondary-foreground))}.text-muted-foreground{color:hsl(var(--muted-foreground))}.bg-accent{background-color:hsl(var(--accent))}.text-accent-foreground{color:hsl(var(--accent-foreground))}.bg-destructive{background-color:hsl(var(--destructive))}.text-destructive-foreground{color:hsl(var(--destructive-foreground))}.border-input{border-color:hsl(var(--input))}.ring-ring{--tw-ring-color:hsl(var(--ring))}.hover\\:bg-primary\\/90:hover{background-color:hsl(var(--primary)/0.9)}.hover\\:bg-secondary\\/80:hover{background-color:hsl(var(--secondary)/0.8)}.hover\\:bg-accent:hover{background-color:hsl(var(--accent))}.hover\\:text-accent-foreground:hover{color:hsl(var(--accent-foreground))}`}</style>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .dark {
+          --background: 224 71% 4%; /* Alien Black */
+          --foreground: 210 40% 98%; /* White */
+          --card: 224 71% 4%;
+          --card-foreground: 210 40% 98%;
+          --popover: 224 71% 4%;
+          --popover-foreground: 210 40% 98%;
+          --primary: 180 65% 35%; /* Phthalo Green */
+          --primary-foreground: 210 40% 98%;
+          --secondary: 215 28% 17%;
+          --secondary-foreground: 210 40% 98%;
+          --muted: 215 28% 17%;
+          --muted-foreground: 215 21% 65%;
+          --accent: 45 93% 47%; /* Gold */
+          --accent-foreground: 224 71% 4%;
+          --destructive: 0 63% 31%;
+          --destructive-foreground: 210 40% 98%;
+          --border: 215 28% 17%;
+          --input: 215 28% 17%;
+          --ring: 180 65% 35%;
+        }
+        .bg-background{background-color:hsl(var(--background))}.text-foreground{color:hsl(var(--foreground))}.bg-card{background-color:hsl(var(--card))}.text-card-foreground{color:hsl(var(--card-foreground))}.border-border{border-color:hsl(var(--border))}.bg-primary{background-color:hsl(var(--primary))}.text-primary-foreground{color:hsl(var(--primary-foreground))}.bg-secondary{background-color:hsl(var(--secondary))}.text-secondary-foreground{color:hsl(var(--secondary-foreground))}.text-muted-foreground{color:hsl(var(--muted-foreground))}.bg-accent{background-color:hsl(var(--accent))}.text-accent-foreground{color:hsl(var(--accent-foreground))}.bg-destructive{background-color:hsl(var(--destructive))}.text-destructive-foreground{color:hsl(var(--destructive-foreground))}.border-input{border-color:hsl(var(--input))}.ring-ring{--tw-ring-color:hsl(var(--ring))}.hover\\:bg-primary\\/90:hover{background-color:hsl(var(--primary)/0.9)}.hover\\:bg-secondary\\/80:hover{background-color:hsl(var(--secondary)/0.8)}.hover\\:bg-accent:hover{background-color:hsl(var(--accent))}.hover\\:text-accent-foreground:hover{color:hsl(var(--accent-foreground))}
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        .animate-spin { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      `}</style>
       <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <div className="flex-1 flex flex-col h-screen"><Header /><main className="flex-1 overflow-y-auto p-6 md:p-8">{renderPage()}</main></div>
     </div>

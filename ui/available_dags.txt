@@ -1,0 +1,792 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 26748  100 26748    0     0   146k      0 --:--:-- --:--:-- --:--:--  146k
+{
+  "dags": [
+    {
+      "dag_display_name": "all_parameters_example",
+      "dag_id": "all_parameters_example",
+      "default_view": "grid",
+      "description": "DAG exemplo utilizando todos os demais par\u00e2metros.",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.371003+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-13T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-13T11:00:00+00:00",
+      "owners": [
+        "pessoa 1",
+        "pessoa 2"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "departamento_x"
+        },
+        {
+          "name": "dou"
+        },
+        {
+          "name": "projeto_a"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "basic_example",
+      "dag_id": "basic_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.375678+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:37:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:37:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:37:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:37:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "37 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:37"
+    },
+    {
+      "dag_display_name": "basic_example_skip_null",
+      "dag_id": "basic_example_skip_null",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.377994+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:29:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:29:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:29:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:29:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "29 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:29"
+    },
+    {
+      "dag_display_name": "department_example",
+      "dag_id": "department_example",
+      "default_view": "grid",
+      "description": "DAG de teste (filtro por departamento)",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.380252+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:59:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:59:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:59:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:59:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "59 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:59"
+    },
+    {
+      "dag_display_name": "discord_example",
+      "dag_id": "discord_example",
+      "default_view": "grid",
+      "description": "DAG de teste de envio de resultados para o Discord",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.382495+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:27:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:27:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:27:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:27:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "27 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:27"
+    },
+    {
+      "dag_display_name": "header_and_footer_example",
+      "dag_id": "header_and_footer_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.384879+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-13T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-13T11:00:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "hide_filters_example",
+      "dag_id": "hide_filters_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.387556+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-13T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-13T11:00:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "inlabs"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "inlabs_advanced_search_example",
+      "dag_id": "inlabs_advanced_search_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.390237+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": null,
+      "next_dagrun_create_after": null,
+      "next_dagrun_data_interval_end": null,
+      "next_dagrun_data_interval_start": null,
+      "owners": [
+        "cdata"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "Dataset"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "inlabs"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "Triggered by datasets"
+    },
+    {
+      "dag_display_name": "inlabs_example",
+      "dag_id": "inlabs_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.391151+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T11:00:00+00:00",
+      "owners": [
+        "cdata"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "Dataset or 0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "inlabs"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "Triggered by datasets or At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "markdown_docs_example",
+      "dag_id": "markdown_docs_example",
+      "default_view": "grid",
+      "description": "DAG com documenta\u00e7\u00e3o em markdown",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.393345+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:10:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:10:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:10:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:10:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "10 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:10"
+    },
+    {
+      "dag_display_name": "multiple_searchs_example",
+      "dag_id": "multiple_searchs_example",
+      "default_view": "grid",
+      "description": "DAG de teste com m\u00faltiplas buscas",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.395690+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-13T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-13T11:00:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "no_terms_example",
+      "dag_id": "no_terms_example",
+      "default_view": "grid",
+      "description": "DAG de teste sem termos definidos",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.398401+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:34:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:34:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:34:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:34:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "34 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:34"
+    },
+    {
+      "dag_display_name": "pubtype_example",
+      "dag_id": "pubtype_example",
+      "default_view": "grid",
+      "description": "DAG de teste (filtro por tipo de publica\u00e7\u00e3o)",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.400817+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:00:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:00"
+    },
+    {
+      "dag_display_name": "qd_example",
+      "dag_id": "qd_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.403110+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:36:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:36:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:36:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:36:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "36 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:36"
+    },
+    {
+      "dag_display_name": "qd_list_territory_id_example",
+      "dag_id": "qd_list_territory_id_example",
+      "default_view": "grid",
+      "description": "DAG de teste com m\u00faltiplos territory_id",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.405493+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-13T11:00:00+00:00",
+      "next_dagrun_create_after": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-14T11:00:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-13T11:00:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "0 8 * * MON-FRI"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 08:00, Monday through Friday"
+    },
+    {
+      "dag_display_name": "ro-dou_inlabs_load_pg",
+      "dag_id": "ro-dou_inlabs_load_pg",
+      "default_view": "grid",
+      "description": "Airflow DAG to download yml files from INLABS and store data into\nPostgres db.\n",
+      "file_token": ".eJxT0s8vKNFPzCxKy8kv109JTC_WL8qPT8kvBbHjc_ITU-Iz83ISk0DCukBhKA8iU5AeD1SlV1CpBAC8vxrV.ooxtNO6DOGremFCGI3HUITfG2xw",
+      "fileloc": "/opt/airflow/dags/ro_dou/dag_load_inlabs/ro-dou_inlabs_load_pg_dag.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:21.159088+00:00",
+      "last_pickled": null,
+      "max_active_runs": 1,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-15T02:59:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T09:59:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T09:59:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-15T02:59:00+00:00",
+      "owners": [
+        "your-name"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "59 6,23 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "inlabs"
+        },
+        {
+          "name": "ro-dou"
+        }
+      ],
+      "timetable_description": "At 06:59 and 23:59"
+    },
+    {
+      "dag_display_name": "slack_example",
+      "dag_id": "slack_example",
+      "default_view": "grid",
+      "description": "DAG de teste de envio de resultados para o Slack",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.408274+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:49:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:49:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:49:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:49:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "49 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:49"
+    },
+    {
+      "dag_display_name": "terms_from_db_example",
+      "dag_id": "terms_from_db_example",
+      "default_view": "grid",
+      "description": "DAG de teste",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.410665+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:02:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:02:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:02:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:02:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "2 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:02"
+    },
+    {
+      "dag_display_name": "terms_from_variable",
+      "dag_id": "terms_from_variable",
+      "default_view": "grid",
+      "description": "DAG de exemplo com termos na Vari\u00e1vel",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3JvX2RvdV9zcmMvZG91X2RhZ19nZW5lcmF0b3IucHki.ktKNu7K5xH3ZBZbVmHN2POg4M3s",
+      "fileloc": "/opt/airflow/dags/ro_dou_src/dou_dag_generator.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": true,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2025-11-15T19:49:06.413000+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "max_consecutive_failed_dag_runs": 0,
+      "next_dagrun": "2025-11-14T08:39:00+00:00",
+      "next_dagrun_create_after": "2025-11-15T08:39:00+00:00",
+      "next_dagrun_data_interval_end": "2025-11-15T08:39:00+00:00",
+      "next_dagrun_data_interval_start": "2025-11-14T08:39:00+00:00",
+      "owners": [],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "39 5 * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dou"
+        },
+        {
+          "name": "generated_dag"
+        }
+      ],
+      "timetable_description": "At 05:39"
+    }
+  ],
+  "total_entries": 19
+}

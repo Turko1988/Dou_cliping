@@ -1,0 +1,55 @@
+airflow-scheduler  | 
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-scheduler  | DB: postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-scheduler  | Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-scheduler  | [2025-11-15T19:04:34.177+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-scheduler  | [2025-11-15T19:04:34.179+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-scheduler  | [2025-11-15T19:04:34.183+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-scheduler  | [2025-11-15T19:04:34.183+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-scheduler  | [2025-11-15T19:04:34.184+0000] {db.py:1674} INFO - Creating tables
+airflow-scheduler  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-scheduler  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-scheduler  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-scheduler  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-scheduler  | Database migrating done!
+airflow-scheduler  | WARNING: Environment variable '_AIRFLOW_DB_UPGRADE' is deprecated please use '_AIRFLOW_DB_MIGRATE' instead
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-scheduler  | airflow already exist in the db
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:728 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:751 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow-scheduler  | /home/airflow/.local/lib/python3.10/site-packages/airflow/configuration.py:765 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-scheduler  |   ____________       _____________
+airflow-scheduler  |  ____    |__( )_________  __/__  /________      __
+airflow-scheduler  | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+airflow-scheduler  | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+airflow-scheduler  |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+airflow-scheduler  | [2025-11-15T19:04:50.865+0000] {_client.py:1026} INFO - HTTP Request: GET https://apacheairflow.gateway.scarf.sh/scheduler?version=2.10.0&python_version=3.10.14&platform=Linux&arch=x86_64&database=postgresql&db_version=17.5&executor=LocalExecutor "HTTP/1.1 200 OK"
+airflow-scheduler  | [2025-11-15T19:04:51.346+0000] {executor_loader.py:254} INFO - Loaded executor: LocalExecutor
+airflow-scheduler  | [2025-11-15T19:04:51.448+0000] {scheduler_job_runner.py:935} INFO - Starting the scheduler
+airflow-scheduler  | [2025-11-15 19:04:51 +0000] [39] [INFO] Starting gunicorn 23.0.0
+airflow-scheduler  | [2025-11-15T19:04:51.449+0000] {scheduler_job_runner.py:942} INFO - Processing each file at most -1 times
+airflow-scheduler  | [2025-11-15 19:04:51 +0000] [39] [INFO] Listening at: http://[::]:8793 (39)
+airflow-scheduler  | [2025-11-15 19:04:51 +0000] [39] [INFO] Using worker: sync
+airflow-scheduler  | [2025-11-15 19:04:51 +0000] [40] [INFO] Booting worker with pid: 40
+airflow-scheduler  | [2025-11-15 19:04:51 +0000] [41] [INFO] Booting worker with pid: 41
+airflow-scheduler  | [2025-11-15T19:04:51.778+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 178
+airflow-scheduler  | [2025-11-15T19:04:51.780+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:04:51.787+0000] {settings.py:63} INFO - Configured default timezone America/Sao_Paulo
+airflow-scheduler  | [2025-11-15T19:09:51.878+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:14:51.940+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:19:51.995+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:24:52.049+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:29:52.100+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:34:52.209+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:39:52.296+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:44:52.380+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:49:52.411+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow-scheduler  | [2025-11-15T19:54:52.450+0000] {scheduler_job_runner.py:1843} INFO - Adopting or resetting orphaned tasks for active dag runs
