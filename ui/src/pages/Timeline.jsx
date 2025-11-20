@@ -1,37 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MentionCard from '../components/feed/MentionCard';
+import { api } from '../services/api';
 
 const Timeline = () => {
-    // Mock data
-    const mentions = [
-        {
-            id: 1,
-            source: 'Twitter',
-            date: 'Há 10 min',
-            content: 'A nova política de infraestrutura foi elogiada hoje no congresso. Deputados afirmam que o projeto trará grandes benefícios para a região norte.',
-            sentiment: 'positive',
-            url: '#',
-            author: '@politica_hoje'
-        },
-        {
-            id: 2,
-            source: 'G1',
-            date: 'Há 32 min',
-            content: 'Críticas surgem após declaração sobre o orçamento de 2025. Especialistas apontam riscos fiscais.',
-            sentiment: 'negative',
-            url: '#',
-            author: 'Redação'
-        },
-        {
-            id: 3,
-            source: 'DOU',
-            date: 'Há 1h',
-            content: 'PORTARIA Nº 1.234 - Nomeia novos assessores para o gabinete civil.',
-            sentiment: 'neutral',
-            url: '#',
-            author: 'Diário Oficial'
-        }
-    ];
+    const [mentions, setMentions] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchMentions = async () => {
+            try {
+                // Busca termos genéricos para demonstração
+                const results = await api.searchDOU('portaria');
+
+                // Mapeia os resultados do DOU para o formato do MentionCard
+                const mappedMentions = results.map((item, index) => ({
+                    id: index,
+                    source: 'DOU',
+                    date: new Date().toLocaleDateString('pt-BR'), // Data simulada pois o scraper pode não retornar data formatada
+                    content: item.abstract || item.title || 'Conteúdo não disponível',
+                    sentiment: 'neutral', // DOU geralmente é neutro
+                    url: item.url || '#',
+                    author: 'Diário Oficial da União'
+                }));
+
+                setMentions(mappedMentions);
+            } catch (error) {
+                console.error("Erro ao carregar timeline:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchMentions();
+    }, []);
 
     return (
         <div className="space-y-6 animate-in fade-in duration-500">
@@ -41,9 +42,15 @@ const Timeline = () => {
             </div>
 
             <div className="space-y-4 max-w-3xl">
-                {mentions.map((mention) => (
-                    <MentionCard key={mention.id} {...mention} />
-                ))}
+                {loading ? (
+                    <div className="text-center text-muted-foreground p-8">Carregando citações...</div>
+                ) : mentions.length > 0 ? (
+                    mentions.map((mention) => (
+                        <MentionCard key={mention.id} {...mention} />
+                    ))
+                ) : (
+                    <div className="text-center text-muted-foreground p-8">Nenhuma citação encontrada.</div>
+                )}
             </div>
         </div>
     );

@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MessageSquare, TrendingUp, AlertTriangle, Activity } from 'lucide-react';
 import KPICard from '../components/dashboard/KPICard';
 import SentimentChart from '../components/dashboard/SentimentChart';
+import { api } from '../services/api';
 
 const DashboardHome = () => {
+  const [stats, setStats] = useState({
+    mentions: 0,
+    sentiment: 'Neutro',
+    alerts: 0,
+    sources: 0
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Por enquanto, fazemos uma busca genérica para popular os dados
+        // No futuro, isso viria de um endpoint de estatísticas dedicado
+        const results = await api.searchDOU('portaria');
+
+        setStats({
+          mentions: results.length || 1284, // Fallback para mock se vazio
+          sentiment: 'Neutro',
+          alerts: 3,
+          sources: 12
+        });
+      } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
       <div>
@@ -15,7 +47,7 @@ const DashboardHome = () => {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <KPICard
           title="Total de Citações"
-          value="1,284"
+          value={loading ? "..." : stats.mentions.toLocaleString()}
           trend="up"
           trendValue="12%"
           icon={MessageSquare}
@@ -23,7 +55,7 @@ const DashboardHome = () => {
         />
         <KPICard
           title="Tom Médio"
-          value="Neutro"
+          value={stats.sentiment}
           trend="up"
           trendValue="Melhorando"
           icon={TrendingUp}
@@ -31,7 +63,7 @@ const DashboardHome = () => {
         />
         <KPICard
           title="Alertas Críticos"
-          value="3"
+          value={stats.alerts}
           trend="down"
           trendValue="-2"
           icon={AlertTriangle}
@@ -39,7 +71,7 @@ const DashboardHome = () => {
         />
         <KPICard
           title="Fontes Ativas"
-          value="12"
+          value={stats.sources}
           trend="neutral"
           trendValue="0"
           icon={Activity}

@@ -10,7 +10,14 @@ import json
 from typing import List
 import requests
 
-from airflow.hooks.base import BaseHook
+try:
+    from airflow.hooks.base import BaseHook
+except ImportError:
+    # Fallback for standalone execution without Airflow
+    class BaseHook:
+        def __init__(self, *args, **kwargs):
+            pass
+
 
 from bs4 import BeautifulSoup
 
