@@ -137,7 +137,14 @@ class DOUHook(BaseHook):
         all_results = []
 
         # Loop for each page of result
-        for page_num in range(number_pages):
+        # LIMIT FOR DEMO: Only fetch first 1 page to avoid timeouts
+        max_pages = 1
+        effective_pages = min(number_pages, max_pages)
+        
+        print(f"DEBUG: Searching {effective_pages} pages (Total: {number_pages})")
+        
+        for page_num in range(effective_pages):
+            print(f"DEBUG: Searching page {page_num + 1}")
             logging.info("Searching in page %s", str(page_num + 1))
 
             # If there is more than one page add extra payload params and reload the page
