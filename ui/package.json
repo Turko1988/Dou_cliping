@@ -4,17 +4,28 @@
   "type": "module",
   "scripts": {
     "proxy": "node proxy-dev.mjs",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.1",
     "express": "^4.19.2",
+    "framer-motion": "^11.2.0",
     "http-proxy-middleware": "^2.0.6",
-    "lucide-react": "^0.446.0",
+    "lucide-react": "^0.378.0",
+    "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.10.0"
+    "react-router-dom": "^7.9.6",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "vite": "^7.2.2"
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.11"
   }
 }

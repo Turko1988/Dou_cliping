@@ -8,8 +8,20 @@ import unicodedata
 import pandas as pd
 import html2text
 
-from airflow.hooks.base import BaseHook
-from airflow.providers.postgres.hooks.postgres import PostgresHook
+try:
+    from airflow.hooks.base import BaseHook
+except ImportError:
+    class BaseHook:
+        def __init__(self, *args, **kwargs):
+            pass
+
+try:
+    from airflow.providers.postgres.hooks.postgres import PostgresHook
+except ImportError:
+    class PostgresHook:
+        def __init__(self, *args, **kwargs):
+            pass
+
 from typing import Optional
 
 class INLABSHook(BaseHook):
