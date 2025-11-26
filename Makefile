@@ -70,7 +70,7 @@ create-path-tmp-variable:
 
 create-inlabs-db:
 	@echo "Creating 'inlabs' database"
-	@docker exec -e PGPASSWORD=airflow ro-dou-postgres-1 sh -c "psql -q -U airflow -f /sql/init-db.sql > /dev/null"
+	@docker exec -e PGPASSWORD=airflow scrapping-postgres-1 sh -c "psql -q -U airflow -f /sql/init-db.sql > /dev/null"
 
 create-inlabs-db-connection:
 	@echo "Creating 'inlabs_db' Airflow connection"
@@ -86,7 +86,7 @@ create-inlabs-db-connection:
 			\"connection_id\": \"inlabs_db\", \
 			\"conn_type\": \"postgres\", \
 			\"schema\": \"inlabs\", \
-			\"host\": \"ro-dou-postgres-1\", \
+			\"host\": \"scrapping-postgres-1\", \
 			\"login\": \"airflow\", \
 			\"password\": \"airflow\", \
 			\"port\": 5432 \
